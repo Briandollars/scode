@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPayCode Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MyPayCode Generator</h1>
+    <form action="/generate-my-pay-code" method="post">
+        <label for="sender-details">Your Payment Details</label>
+        <input type="text" id="sender-details" name="sender_details" placeholder="Enter your payment details" required>
+
+        <label for="receiver-details">Receiver Payment Details</label>
+        <input type="text" id="receiver-details" name="receiver_details" placeholder="Enter receiver's payment details" required>
+
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+
+        <label for="payment-date">Payment Date</label>
+        <input type="datetime-local" id="payment-date" name="payment_date" required>
+
+        <label for="processed-date">Processed Date</label>
+        <input type="datetime-local" id="processed-date" name="processed_date" required>
+
+        <button type="submit">Generate Payment Code</button>
+    </form>
+</body>
+</html>
